@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Assistant - Ask Questions About Your PDF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 PDF Assistant</h1>
+            <p class="subtitle">Upload a PDF and ask questions about its content</p>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-container">
+                    <input type="file" id="fileInput" accept=".pdf" hidden>
+                    <button id="uploadBtn" class="btn btn-primary">
+                        <span class="icon">📁</span>
+                        Choose PDF File
+                    </button>
+                    <div id="fileInfo" class="file-info hidden">
+                        <span class="icon">✓</span>
+                        <span id="fileName">No file uploaded</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+                <div class="chat-container">
+                    <div id="chatMessages" class="chat-messages">
+                        <div class="welcome-message">
+                            <h2>Welcome! 👋</h2>
+                            <p>Upload a PDF file to start asking questions about its content.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Ask a question about your PDF..." 
+                            disabled
+                        >
+                        <button id="sendBtn" class="btn btn-send" disabled>
+                            <span class="icon">📤</span>
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by OpenAI GPT • Built with Flask & JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

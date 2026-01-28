@@ -102,3 +102,9 @@ yarn.lock
 *.bak
 *.swp
 *~
+
+# Uploaded files
+uploads/
+*.cfg
+Lib/
+Scripts/
